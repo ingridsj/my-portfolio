@@ -6,6 +6,9 @@
   padding: 0;
   border: 0;
 }
+:root {
+  --text-color: #4A4A4A;
+}
 
 html {
   font-size: ;
@@ -23,17 +26,18 @@ body {
   align-items: center;
   width: 90%;
 }
+.nav-bar {
+  margin-left: 12rem;
+}
 nav ul {
   display: flex;
 }
-
 nav li {
   list-style: none;
-
 }
 nav a {
   text-decoration: none;
-  color: black;
+  color: var(--text-color);
   font-size: 1rem;
   padding: 2rem;
 }
@@ -41,10 +45,13 @@ nav a {
 div.content{
   display: flex;
   justify-content: space-between;
+  color: var(--text-color);
 }
 div.content-text {
   max-width: 600px;
   padding: 80px 0;
+  text-align: justify;
+  font-size: 1.2rem;
 }
 div.content h1 {
   font-size: 3rem;
@@ -53,4 +60,23 @@ div.content h1 {
 div.content img {
   width: 500px;
   margin-left: 10px;
+}
+
+/* === SECTION CARDS */
+
+.section-cards {
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2.4rem;
+}
+
+.cards {
+  display: grid;
+
+}
+
+.image-card-container img {
+  width: 70%;
+  
 }
