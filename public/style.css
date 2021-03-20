@@ -1,50 +1,55 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
 
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
   border: 0;
+  box-sizing: border-box;
+  text-decoration: none;
 }
 :root {
   --text-color: #4A4A4A;
 }
-
 html {
-  font-size: ;
+  font-size: 90%;
 }
 body {
-  margin-left: 150px;
-  margin-top: 50px;
   font-family: 'Space Mono', monospace;
+}
+
+.max-width {
+  max-width: 1300px; 
+  padding: 0 80px;
+  margin: auto;
 }
 
 /*=== NAVIGATION BAR*/
 
-.container {
+.nav-bar {
+  background: grey;
+  position: fixed;
+  width: 100%;
+  padding: 15px 0;
+}
+.nav-bar .max-width {
   display: flex;
   align-items: center;
-  width: 90%;
+  justify-content: space-between;
 }
-.nav-bar {
-  margin-left: 12rem;
-}
-nav ul {
-  display: flex;
-}
-nav li {
+.nav-bar .menu li {
   list-style: none;
+  display: inline-block;
 }
-nav a {
-  text-decoration: none;
+.nav-bar .menu li a {
   color: var(--text-color);
-  font-size: 1rem;
-  padding: 2rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-left: 25px;
 }
 
 div.content{
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   color: var(--text-color);
 }
 div.content-text {
@@ -65,10 +70,12 @@ div.content img {
 /* === SECTION CARDS */
 
 .section-cards {
-
+  text-align: center;
+  max-width: 900px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2.4rem;
+  align-items: center;
 }
 
 .cards {
@@ -78,5 +85,4 @@ div.content img {
 
 .image-card-container img {
   width: 70%;
-  
 }
