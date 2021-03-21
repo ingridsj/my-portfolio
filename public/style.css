@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
 
 * {
   margin: 0;
@@ -8,7 +9,8 @@
   text-decoration: none;
 }
 :root {
-  --text-color: #4A4A4A;
+  --primary-color: #4A4A4A;
+  --secondary-color: #7159c1;
 }
 html {
   font-size: 90%;
@@ -26,63 +28,80 @@ body {
 /*=== NAVIGATION BAR*/
 
 .nav-bar {
-  background: grey;
+  background: white;
   position: fixed;
   width: 100%;
+  padding: 30px 0;
+}
+.nav-bar.sticky {
   padding: 15px 0;
+  border-bottom: solid var(--primary-color);
+  border-width: 1px;
 }
 .nav-bar .max-width {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+.nav-bar .logo a {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2em;
+  color: black;
+  letter-spacing: 2px;
+  position: relative;
+}
 .nav-bar .menu li {
   list-style: none;
   display: inline-block;
 }
 .nav-bar .menu li a {
-  color: var(--text-color);
+  color: var(--primary-color);
   font-size: 1.1rem;
   font-weight: 500;
   margin-left: 25px;
+  position: relative;
+}
+.nav-bar .menu li a:hover {
+  color: var(--secondary-color);
+}
+.nav-bar .menu li a::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: var(--secondary-color);
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+}
+.nav-bar .menu li a:hover::after {
+  width: 100%;
+  transition: width 500ms ease-in-out;
 }
 
-div.content{
+/* === HOME SECTION === */
+
+.home {
   display: flex;
-  justify-content: flex-start;
-  color: var(--text-color);
+  background: url("/public/imageOne.svg") no-repeat right;
+  height: 100vh;
+  color: var(--primary-color);
+  min-height: 500px;
 }
-div.content-text {
-  max-width: 600px;
-  padding: 80px 0;
+
+.home .max-width {
+  margin:  auto 0 auto 40px;
+}
+
+.home .home-content .title-home{
+  font-size: 2rem;
+}
+
+.home .home-content .text-home{
+  font-size: 1.1rem;
+  max-width: 500px;
   text-align: justify;
-  font-size: 1.2rem;
-}
-div.content h1 {
-  font-size: 3rem;
+  margin-top: 10px;
 }
 
-div.content img {
-  width: 500px;
-  margin-left: 10px;
-}
+/* === PROJECTS SECTION */
 
-/* === SECTION CARDS */
-
-.section-cards {
-  text-align: center;
-  max-width: 900px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2.4rem;
-  align-items: center;
-}
-
-.cards {
-  display: grid;
-
-}
-
-.image-card-container img {
-  width: 70%;
-}
