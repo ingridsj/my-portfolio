@@ -33,6 +33,7 @@ body {
   width: 100%;
   padding: 20px 0;
   transition: all 0.3s ease;
+  z-index: 999;
 }
 .nav-bar.sticky {
   padding: 10px 0;
@@ -93,38 +94,115 @@ body {
   margin: auto 0 auto 40px;
   width: 100%;
 }
-.home .home-content {
-  padding: 200px 0 50px 0;
+.home-content {
+  padding: 150px 0 50px 0;
   display: flex;
   justify-content: space-between;
 }
 
-.home .home-content .title-home{
+.title-home{
   font-size: 2rem;
 }
 
-.home .home-content .text-home{
+.text-home{
   font-size: 1.1rem;
   max-width: 500px;
   text-align: justify;
   margin-top: 10px;
 }
-
-.home .home-content .content-img .main-image img{
-  height: 500px;
-  margin: -60px;
-}
-
-.home .home-content .content-img .icons {
-  background: black;
-  display: flex;
-  justify-content: space-around;
+.content-img {
   position: relative;
 }
 
-.home .home-content .content-img .icons img {
+.main-img img{
+  height: 500px;
+  margin: -60px;
+}
+.icons {  
+  position: absolute;
+  top: 0;
+}
+.icons img {
+  margin-left: 60px;
   height: 32px;
 }
 
+.icons .icon-one,
+.icons .icon-two,
+.icons .icon-three,
+.icons .icon-four,
+.icons .icon-five {
+  position: relative;
+
+}
+.icons .icon-one {
+  top: 60px;
+  animation: icon-one 1s ease-in-out infinite alternate; 
+
+}
+.icons .icon-two { 
+  bottom: 20px;
+  right: 20px;
+  animation: icon-two 1s ease-in-out infinite alternate; 
+
+}
+.icons .icon-three {  
+  bottom: 45px;
+  right: 5px;
+  animation: icon-three 1s ease-in infinite alternate; 
+}
+.icons .icon-four {
+  bottom: 10px;
+  right: 10px;
+  animation: icon-four 1s ease-in-out infinite alternate;
+}
+.icons .icon-five {
+  top: 60px;
+  right: 80px;
+  animation: icon-five 1s ease-in-out infinite alternate; 
+
+}
+
+
+@keyframes icon-one {
+  0% {
+    top: 20px;
+  }
+  100% {
+    top: 60px;
+  }
+}
+@keyframes icon-two {
+  0% {
+    right: 20px;
+  }
+  100% {
+    right: 0px;
+  }
+}
+@keyframes icon-three {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes icon-four {
+  0% {
+    top: 0px;
+  }
+  100% {
+    top: 10px;
+  }
+}
+@keyframes icon-five {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 /* === PROJECTS SECTION */
 
