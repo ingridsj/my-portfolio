@@ -1,5 +1,5 @@
 const navBar = document.querySelector('.nav-bar')
 
-window.addEventListener("scroll", function() {
+const addScrollMenu = window.addEventListener("scroll", () => {
   navBar.classList.toggle('sticky', window.scrollY > 0)
 })
