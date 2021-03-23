@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@200;300;400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
 
 * {
@@ -16,7 +16,7 @@ html {
   font-size: 90%;
 }
 body {
-  font-family: 'Space Mono', monospace;
+  font-family: 'Heebo', sans-serif;
 }
 
 .max-width {
@@ -101,26 +101,30 @@ body {
 }
 
 .title-home{
-  font-size: 2rem;
+  font-size: 3.5rem;
+  font-weight: 400;
+  margin-bottom: 20px;
 }
-
-.text-home{
-  font-size: 1.1rem;
-  max-width: 500px;
-  text-align: justify;
-  margin-top: 10px;
+.title-home span {
+  color: #2196F3;
+}
+.social-medias-home a {
+  margin-right: 10px;
 }
 .content-img {
   position: relative;
 }
-
+.main-img {
+  margin: -90px;
+}
 .main-img img{
-  height: 500px;
-  margin: -60px;
+  height: 700px;
+  margin: -90px;
 }
 .icons {  
   position: absolute;
-  top: 0;
+  top: -90px;
+  left: 50px;
 }
 .icons img {
   margin-left: 60px;
@@ -147,7 +151,7 @@ body {
 
 }
 .icons .icon-three {  
-  bottom: 45px;
+  bottom: 40px;
   right: 5px;
   animation: icon-three 1s ease-in infinite alternate; 
 }
@@ -163,6 +167,42 @@ body {
 
 }
 
+/* === ABOUT SECTION === */
+
+.about {
+  height: 100vh;
+  padding: 100px 0;
+}
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title-about {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: 500;
+  margin-bottom: 60px;
+}
+.column-left {
+  width: 45%;
+}
+.column-left img {
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.column-right {
+  width: 55%;
+  text-align: justify;
+}
+.text-about {
+  font-size: 1.1rem;
+}
+
+/* === KEYFRAMES SECTION === */
 
 @keyframes icon-one {
   0% {
@@ -204,5 +244,4 @@ body {
     transform: scale(1);
   }
 }
-/* === PROJECTS SECTION */
 
