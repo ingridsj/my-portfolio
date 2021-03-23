@@ -83,11 +83,11 @@ body {
 /* === HOME SECTION === */
 
 .home {
-  display: flex;
+  display: flex; 
   background: white;
   height: 100vh;
   color: var(--primary-color);
-  min-height: 500px;
+  padding: 100px 0;
 }
 
 .home .max-width {
@@ -95,15 +95,18 @@ body {
   width: 100%;
 }
 .home-content {
-  padding: 150px 0 50px 0;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
-
+.content-text {
+  width: 45%;
+}
 .title-home{
   font-size: 3.5rem;
   font-weight: 400;
   margin-bottom: 20px;
+  max-width: 570px;
 }
 .title-home span {
   color: #2196F3;
@@ -112,19 +115,18 @@ body {
   margin-right: 10px;
 }
 .content-img {
+  width: 55%;
   position: relative;
 }
-.main-img {
-  margin: -90px;
-}
 .main-img img{
-  height: 700px;
-  margin: -90px;
+  height: 640px;
+  width: 640px;
+  object-fit: cover;
 }
 .icons {  
   position: absolute;
-  top: -90px;
-  left: 50px;
+  top: 60px;
+  left: 80px;
 }
 .icons img {
   margin-left: 60px;
